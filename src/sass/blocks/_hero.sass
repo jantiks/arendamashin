@@ -1,0 +1,69 @@
+.hero
+   background: url('../img/hero/herobg.jpg')
+   background-repeat: no-repeat
+   background-size: cover
+   padding-top: 70px
+   height: 100vh
+   .navbar
+      max-width: 1700px
+      width: 90%
+      margin: 0 auto
+      padding: 0
+      display: flex
+      justify-content: space-between
+      .logo
+         &__image
+            display: inline-block
+            margin-right: 22px
+         &__text
+            display: inline-block
+         &__title
+            margin: 0
+            font-size: 36px
+            color: $logo-color
+            +title
+         &__subtitle
+            margin: 0
+            font-size: 16px
+            color: $text-color
+            +text
+      &-items
+         margin: 0
+         padding: 0
+         list-style: none
+         display: flex
+         align-items: center
+      &__item
+         margin-left: 40px
+      &__link
+         text-decoration: none
+         font-size: 16px
+         font-weight: 600
+         color: $text-color
+         transition: 0.2s
+         +title
+         &::after
+            content: " "
+            display: block
+            height: 2px
+            position: relative
+            top: 10px
+            background-color: $logo-color
+            transition: 0.2s
+            transform: scale(0)
+         &:hover
+            color: $logo-color
+            &::after
+               transform: scale(1)
+   &__title
+      max-width: 446px
+      font-size: 84px
+      color: $logo-color
+      margin-bottom: 30px
+      +text
+   &__subtitle
+      font-size: 24px
+      color: $text-color
+      line-height: 1.5
+      font-weight: 600
+      +text
