@@ -5,12 +5,16 @@
    padding-top: 70px
    height: 100vh
    .navbar
-      max-width: 1700px
-      width: 90%
-      margin: 0 auto
-      padding: 0
-      display: flex
-      justify-content: space-between
+      padding-top: 20px
+      padding-bottom: 20px
+      background-color: #5D4954
+      &-body
+         max-width: 1700px
+         width: 90%
+         margin: 0 auto
+         display: flex
+         justify-content: space-between
+         align-items: center
       .logo
          &__image
             display: inline-block
@@ -33,6 +37,7 @@
          list-style: none
          display: flex
          align-items: center
+
       &__item
          margin-left: 40px
       &__link
@@ -41,22 +46,25 @@
          font-weight: 600
          color: $text-color
          transition: 0.2s
+         position: relative
          +title
          &::after
             content: " "
             display: block
             height: 2px
-            position: relative
-            top: 10px
+            width: 100%
             background-color: $logo-color
-            transition: 0.2s
+            position: absolute
+            margin-top: 6px
             transform: scale(0)
+            transition: 0.2s
          &:hover
             color: $logo-color
             &::after
                transform: scale(1)
+
    &__title
-      max-width: 446px
+      max-width: 550px
       font-size: 84px
       color: $logo-color
       margin-bottom: 30px
@@ -67,3 +75,59 @@
       line-height: 1.5
       font-weight: 600
       +text
+   .hamburger
+      margin-top:
+      cursor: pointer
+      display: block
+      display: none
+      &__line
+         width: 40px
+         height: 3px
+         background-color: $logo-color
+         display: block
+         margin-bottom: 5px
+         border: 2px solid $logo-color
+         border-radius: 2px
+@media ( max-width:980px)
+   .logo
+      &__title
+         display: none
+      &__subtitle
+         display: none
+      &__image
+         margin-top: 10px
+@media ( max-width:810px)
+   .hero
+      padding-top: 0px
+      .navbar
+         width: 100%
+         justify-content: space-between
+         position: relative
+         .logo
+            margin-left: 5%
+         .hamburger
+            display: block
+            margin-right: 20px
+            z-index: 2
+         &-items
+            display: flex
+            position: absolute
+            flex-direction: column
+            justify-content: space-around
+            background-color: #5D4954
+            height: 400px
+            top: 0
+            left: 50%
+            width: 50%
+            transition: 0.5s
+            top: -400px
+            z-index: 0
+         &__active
+            top: 100px
+         &__item
+            margin: 0
+         &__link
+            font-size: 20px
+            font-weight: 300
+            color: $logo-color
+            transition: 0.2s
