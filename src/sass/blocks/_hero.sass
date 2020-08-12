@@ -16,6 +16,7 @@
          justify-content: space-between
          align-items: center
       .logo
+         z-index: 3
          &__image
             display: inline-block
             margin-right: 22px
@@ -88,7 +89,7 @@
          margin-bottom: 5px
          border: 2px solid $logo-color
          border-radius: 2px
-@media ( max-width:980px)
+@media screen and ( max-width:980px  )
    .logo
       &__title
          display: none
@@ -96,7 +97,8 @@
          display: none
       &__image
          margin-top: 10px
-@media ( max-width:810px)
+
+@media screen and ( max-width:810px )
    .hero
       padding-top: 0px
       .navbar
@@ -108,17 +110,20 @@
          .hamburger
             display: block
             margin-right: 20px
-            z-index: 2
+            z-index: 5
+         .hamburger__active
+            &:nth-child(3)
+               transform: rotate(-45deg)
+
          &-items
             display: flex
             position: absolute
             flex-direction: column
             justify-content: space-around
             background-color: #5D4954
-            height: 400px
-            top: 0
             left: 50%
-            width: 50%
+            height: 400px
+            min-width: 50%
             transition: 0.5s
             top: -400px
             z-index: 0
@@ -131,3 +136,9 @@
             font-weight: 300
             color: $logo-color
             transition: 0.2s
+@media screen and ( max-width:576px)
+   .hero__title
+      font-size: 70px
+   .navbar-items
+      transform: translate(-50%)
+      width: 100%
