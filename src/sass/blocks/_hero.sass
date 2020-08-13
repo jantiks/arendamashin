@@ -3,11 +3,11 @@
    background-repeat: no-repeat
    background-size: cover
    padding-top: 70px
-   height: 100vh
+   height: 800px
    .navbar
       padding-top: 20px
       padding-bottom: 20px
-      background-color: #5D4954
+      background-color: $nav-color
       &-body
          max-width: 1700px
          width: 90%
@@ -105,6 +105,7 @@
          width: 100%
          justify-content: space-between
          position: relative
+         z-index: 2
          .logo
             margin-left: 5%
          .hamburger
@@ -114,19 +115,18 @@
          .hamburger__active
             &:nth-child(3)
                transform: rotate(-45deg)
-
          &-items
             display: flex
             position: absolute
             flex-direction: column
             justify-content: space-around
-            background-color: #5D4954
+            background-color: $nav-color
             left: 50%
             height: 400px
             min-width: 50%
             transition: 0.5s
             top: -400px
-            z-index: 0
+            z-index: -1
          &__active
             top: 100px
          &__item
@@ -136,6 +136,10 @@
             font-weight: 300
             color: $logo-color
             transition: 0.2s
+            opacity: 1
+@media screen and ( max-width:642px  )
+   .hero
+      height: 550px
 @media screen and ( max-width:576px)
    .hero__title
       font-size: 70px
