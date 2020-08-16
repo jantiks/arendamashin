@@ -763,6 +763,7 @@ body {
 .places__slider .slick-arrow {
   position: absolute;
   z-index: 2;
+  top: 22%;
 }
 
 .places__slider .slick-next {
@@ -774,7 +775,6 @@ body {
   background: url("../img/places/right-arrow.png");
   background-repeat: no-repeat;
   right: -25px;
-  top: 23%;
 }
 
 .places__slider .slick-prev {
@@ -786,7 +786,6 @@ body {
   background: url("../img/places/left-arrow.png");
   background-repeat: no-repeat;
   left: -40px;
-  top: 23%;
 }
 
 .places__slide {
@@ -968,6 +967,150 @@ body {
 @media screen and (max-width: 380px) {
   .feedback__text {
     padding: 0;
+  }
+}
+
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f7f4f2;
+}
+
+.about-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-slider {
+  margin: 0 auto;
+  max-width: 560px;
+  position: relative;
+}
+
+.about-slider .slick-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 140px;
+}
+
+.about-slider .slick-next {
+  outline: none;
+  font-size: 0;
+  border: none;
+  width: 54px;
+  height: 54px;
+  background: url("../img/places/right-arrow.png");
+  background-repeat: no-repeat;
+  right: -35px;
+}
+
+.about-slider .slick-prev {
+  outline: none;
+  font-size: 0;
+  border: none;
+  width: 54px;
+  height: 54px;
+  background: url("../img/places/left-arrow.png");
+  background-repeat: no-repeat;
+  left: -40px;
+}
+
+.about-slider__img {
+  display: inline-block;
+  height: 320px;
+}
+
+.about-header {
+  margin: 0 auto;
+  padding-left: 40px;
+  max-width: 300px;
+}
+
+.about-header__title {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #222222;
+  margin-bottom: 50px;
+  font-family: 'istok web' , sans-serif;
+}
+
+.about-header__text {
+  font-size: 16px;
+  color: #444444;
+  margin-bottom: 20px;
+  font-family: 'Open Sans' , sans-serif;
+}
+
+.about__subtitle {
+  font-size: 13px;
+  color: #777777;
+}
+
+.about__title {
+  margin-top: 0;
+  max-width: 200px;
+  font-size: 36px;
+  color: #222222;
+  line-height: 1.33;
+  letter-spacing: -1.44px;
+  font-family: 'istok web' , sans-serif;
+}
+
+@media screen and (max-width: 970px) {
+  .about-slider {
+    max-width: 480px;
+  }
+  .about-slider__img {
+    height: 280px;
+  }
+  .about .slick-arrow {
+    top: 120px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .about-body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-header {
+    max-width: 400px;
+    padding-left: 0;
+  }
+  .about-header__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .about-header__text {
+    margin-bottom: 0px;
+  }
+  .about__title {
+    max-width: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-slider {
+    max-width: 320px;
+  }
+  .about-slider .slick-arrow {
+    top: 82px;
+  }
+  .about-slider__img {
+    max-height: 200px;
+  }
+  .about-header {
+    max-width: 320px;
   }
 }
 /*# sourceMappingURL=style.css.map */

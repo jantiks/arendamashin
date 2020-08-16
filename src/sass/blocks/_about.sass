@@ -1,0 +1,99 @@
+.about
+   padding-top: 100px
+   padding-bottom: 100px
+   background-color: #f7f4f2
+   &-body
+      display: flex
+      justify-content: space-between
+   &-slider
+      margin: 0 auto
+      max-width: 560px
+      position: relative
+      .slick-arrow
+         position: absolute
+         z-index: 2
+         top: 140px
+      .slick-next
+         outline: none
+         font-size: 0
+         border: none
+         width: 54px
+         height: 54px
+         background: url("../img/places/right-arrow.png")
+         background-repeat: no-repeat
+         right: -35px
+      .slick-prev
+         outline: none
+         font-size: 0
+         border: none
+         width: 54px
+         height: 54px
+         background: url("../img/places/left-arrow.png")
+         background-repeat: no-repeat
+         left: -40px
+      &__img
+         display: inline-block
+         height: 320px
+
+   &-header
+      margin: 0 auto
+      padding-left: 40px
+      max-width: 300px
+      &__title
+         font-size: 24px
+         line-height: 1.5
+         color: #222222
+         margin-bottom: 50px
+         +title
+      &__text
+         font-size: 16px
+         color: #444444
+         margin-bottom: 20px
+         +text
+   &__subtitle
+      font-size: 13px
+      color: #777777
+   &__title
+      margin-top: 0
+      max-width: 200px
+      font-size: 36px
+      color: #222222
+      line-height: 1.33
+      letter-spacing: -1.44px
+      +title
+@media screen and ( max-width:970px)
+   .about
+      &-slider
+         max-width: 480px
+         &__img
+            height: 280px
+      .slick-arrow
+         top: 120px
+@media screen and ( max-width:790px)
+   .about
+      padding-top: 30px
+      padding-bottom: 30px
+
+      &-body
+         flex-wrap: wrap
+      &-header
+         max-width: 400px
+         padding-left: 0
+         &__title
+            margin-top: 0
+            margin-bottom: 10px
+         &__text
+            margin-bottom: 0px
+      &__title
+         max-width: 400px
+         margin-top: 10px
+         margin-bottom: 10px
+@media screen and ( max-width:500px)
+   .about-slider
+      max-width: 320px
+      .slick-arrow
+         top: 82px
+      &__img
+         max-height: 200px
+   .about-header
+      max-width: 320px

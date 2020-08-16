@@ -19,9 +19,29 @@ $('.places__slider').slick({
             arrows: false
          }
       }
-
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
    ]
 });
+
+$(".about-slider").slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   asNavFor: '.about-header__slider',
+   responsive: [
+      {
+         breakpoint: 386,
+         settings: {
+            arrows: false
+         }
+      }
+   ]
+});
+$(".about-header__slider").slick({
+   infinite: true,
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   asNavFor: '.about-slider'
+});
+
+
